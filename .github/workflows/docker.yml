@@ -39,9 +39,9 @@ jobs:
       - name: 🔍 Test Docker container
         run: |
           echo "Testing Docker container..."
-          docker run -d -p 3009:3009 --name test-container my-nextjs-app:latest
+          docker run -d -p 4009:4009 --name test-container my-nextjs-app:latest
           sleep 10
-          curl -f http://localhost:3009 || exit 1
+          curl -f http://localhost:4009 || exit 1
           docker stop test-container
           docker rm test-container
           echo "Docker container test passed!"
